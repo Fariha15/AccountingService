@@ -1,7 +1,5 @@
 ﻿using MailKit.Net.Smtp; //[NOTE: for email]
 using MimeKit;  //[NOTE: for email]
-//using Microsoft.AspNetCore.Http;
-
 using AccountingService.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -38,7 +36,7 @@ namespace AccountingService.Controllers
         {
             // create email message
             string username = "testingsamplemail1530@gmail.com";
-            string password = "fariha12345$";
+            string password = "password";
 
             var message = new MimeMessage();
             message.From.Add(new MailboxAddress(name, email));
