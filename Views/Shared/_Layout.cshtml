@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AccountingService</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <style>
+
+
+            .view, body, html {
+                height: 100%
+            }
+
+            .navbar {
+                background-color: rgb(8, 8, 8, 77%);
+            }
+
+            .page-footer, .top-nav-collapse {
+                background-color: #1C2331
+            }
+        </style>
+
+      
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+            <div class="container">
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="" target="_blank">
+                    <strong>Accounting Service</strong>
+                </a>
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" style="padding-left:15px;">
+                                Home
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item"><a href="/Home/Index?#about" data-id="about" class="nav-link scrolling-navbar" style="padding-left:15px;"> About </a></li>
+                        <li class="nav-item"><a href="/Home/Index?#services" data-id="services" class="nav-link" style="padding-left:15px;"> Services </a></li>
+                        <li class="nav-item"><a href="/Home/Index?#commitment" data-id="commitment" class="nav-link" style="padding-left:15px;"> Our Commitment </a></li>
+                        <li class="nav-item"><a href="/Home/Index?#contact" data-id="contact" class="nav-link" style="padding-left:15px;"> Contact </a></li>
+
+                      
+                    </ul>
+                    <b style="text-align:right;color:white;">Contact No: +8801781555737</b>
+
+                </div>
+
+            </div>
+        </nav>
+        <!-- Navbar -->
+        <div class="view" style="background-repeat: no-repeat; background-size: cover; ">
+            <img src="~/Images/Background Image.jpg" asp-append-version="true" style="height: 695px; width: 100%;" />
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+                <!-- Content -->
+                <!-- Content -->
+
+            </div>
+            <!-- Mask & flexbox options-->
+
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <br />
+    @await Html.PartialAsync("footer.cshtml");
+  
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
